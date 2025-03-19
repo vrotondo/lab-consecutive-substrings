@@ -1,2 +1,32 @@
 Please add your pseudocode to this file
 And a written explanation of your solution
+
+PROBLEM: Find All Consecutive Substrings
+- Given a string S of length n
+- Find all possible consecutive substrings (continuous sequences of characters)
+- Return them in the order they appear
+- Example: 'abc' should return ['a', 'ab', 'abc', 'b', 'bc', 'c']
+
+FUNCTION findAllConsecutiveSubstrings(string):
+    IF string is empty THEN
+        RETURN empty array
+    END IF
+    
+    Create empty array called 'result'
+    
+    # Outer loop: Choose starting position
+    FOR startIndex FROM 0 TO length of string - 1:
+        
+        # Inner loop: Choose ending position (or length)
+        FOR endIndex FROM startIndex TO length of string - 1:
+            # Extract substring from startIndex to endIndex (inclusive)
+            substring = characters from string[startIndex] to string[endIndex]
+            
+            # Add to result
+            Add substring to result
+        END FOR
+        
+    END FOR
+    
+    RETURN result
+END FUNCTION
