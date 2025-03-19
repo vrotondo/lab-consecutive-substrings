@@ -1,5 +1,20 @@
 function consecutiveSubstrings(string) {
-  // type your code here
+  if (!string || string.length === 0) {
+    return [];
+  }
+
+  const result = [];
+
+  for (let startIndex = 0; startIndex < string.length; startIndex++) {
+    for (let endIndex = startIndex; endIndex < string.length; endIndex++) {
+      const substring = string.substring(startIndex, endIndex + 1);
+      if (substring.length > 0) {
+        result.push(substring);
+      }
+    }
+  }
+
+  return result;
 }
 
 if (require.main === module) {
@@ -14,5 +29,3 @@ if (require.main === module) {
 }
 
 module.exports = consecutiveSubstrings;
-
-
